@@ -1048,12 +1048,349 @@ html:not(.lt-ie10) .not-animated {
 	transition: .2s;
 }
 
+
+.owl-dot:only-child {
+
+	display: none;
+
+}
+
 .owl-dot:hover, .owl-dot.active {
 	background-color: #80deea;
 }
 
 .owl-dot + .owl-dot {
 	margin-left: 15px;
+}
+
+.owl-carousel.owl-carousel-light-dots .owl-dot {
+
+	border-color: #fff;
+
+}
+
+
+
+.owl-carousel.owl-carousel-light-dots .owl-dot:hover, .owl-carousel.owl-carousel-light-dots .owl-dot:focus {
+
+	background-color: #fff;
+
+}
+
+
+
+.owl-carousel.owl-carousel-light-dots .owl-dot.active {
+
+	background-color: #fff;
+
+}
+
+
+
+.carousel-post-gallery {
+
+	overflow: hidden;
+
+}
+
+
+
+.carousel-post-gallery[data-nav='true'] {
+
+	padding-left: 0;
+
+	padding-right: 0;
+
+}
+
+
+
+.carousel-post-gallery[data-nav='true'] .owl-dots {
+
+	position: absolute;
+
+	width: 100%;
+
+	bottom: 30px;
+
+}
+
+
+
+.carousel-post-gallery .item .img-thumbnail-variant-1 {
+
+	width: 100%;
+
+}
+
+
+
+.carousel-post-gallery .owl-prev,
+
+.carousel-post-gallery .owl-next {
+
+	display: none;
+
+	position: absolute;
+
+	top: 50%;
+
+	width: 50px;
+
+	height: 50px;
+
+	line-height: 52px;
+
+	text-align: center;
+
+	margin-top: -25px;
+
+	z-index: 10;
+
+	cursor: pointer;
+
+	color: #ececee;
+
+	transition: .33s;
+
+	font-size: 30px;
+
+}
+
+
+
+.carousel-post-gallery .owl-prev:hover,
+
+.carousel-post-gallery .owl-next:hover {
+
+	color: #80deea;
+
+}
+
+
+
+@media (min-width: 768px) {
+
+	.carousel-post-gallery .owl-prev,
+
+	.carousel-post-gallery .owl-next {
+
+		display: block;
+
+	}
+
+}
+
+
+
+.carousel-post-gallery .owl-prev {
+
+	left: 0;
+
+	border-radius: 0 4px 4px 0;
+
+	transform: translateX(-100%);
+
+}
+
+
+
+.carousel-post-gallery .owl-next {
+
+	right: -1px;
+
+	border-radius: 4px 0 0 4px;
+
+	transform: translateX(100%);
+
+}
+
+
+
+.carousel-post-gallery:hover .owl-prev,
+
+.carousel-post-gallery:hover .owl-next {
+
+	transform: translateX(0);
+
+}
+
+
+
+.carousel-blog-post-minimal {
+
+	max-height: 320px;
+
+}
+
+
+
+.carousel-blog-post-minimal .item {
+
+	position: relative;
+
+	z-index: 1;
+
+	padding-bottom: 75%;
+
+	overflow: hidden;
+
+	margin-left: -1px;
+
+	margin-right: -1px;
+
+}
+
+
+
+.carousel-blog-post-minimal .item > * {
+
+	position: absolute;
+
+	top: 50%;
+
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+
+	min-height: 100%;
+
+	min-width: 100%;
+
+}
+
+
+
+@media (min-width: 992px) {
+
+	.carousel-blog-post-minimal .item {
+
+		padding-bottom: 36%;
+
+	}
+
+}
+
+
+
+@media (max-width: 767.98px) {
+
+	.owl-carousel-spacing-1 {
+
+		padding-left: 10px;
+
+		padding-right: 10px;
+
+	}
+
+	.owl-carousel-spacing-1 .owl-prev {
+
+		left: -5px;
+
+	}
+
+	.owl-carousel-spacing-1 .owl-next {
+
+		right: -5px;
+
+	}
+
+}
+
+
+
+.owl-carousel-spacing-2 .owl-stage-outer {
+
+	padding-top: 15px;
+
+}
+
+
+
+/*
+
+* @subsection   RD Navbar
+
+*
+
+* @description  Describes style declarations for RD Navbar extension
+
+*
+
+* @author       Evgeniy Gusarov
+
+* @link         https://ua.linkedin.com/pub/evgeniy-gusarov/8a/a40/54a
+
+*/
+
+@-webkit-keyframes rd-navbar-slide-down {
+
+	0% {
+
+		transform: translateY(-100%);
+
+	}
+
+	100% {
+
+		transform: translateY(0);
+
+	}
+
+}
+
+
+
+@keyframes rd-navbar-slide-down {
+
+	0% {
+
+		transform: translateY(-100%);
+
+	}
+
+	100% {
+
+		transform: translateY(0);
+
+	}
+
+}
+
+
+
+@-webkit-keyframes rd-navbar-slide-up {
+
+	0% {
+
+		transform: translateY(0);
+
+	}
+
+	100% {
+
+		transform: translateY(-100%);
+
+	}
+
+}
+
+
+
+@keyframes rd-navbar-slide-up {
+
+	0% {
+
+		transform: translateY(0);
+
+	}
+
+	100% {
+
+		transform: translateY(-100%);
+
+	}
+
 }
 
 .rd-navbar-wrap, .rd-navbar-fixed .rd-navbar-nav-wrap, .rd-navbar-fixed .rd-navbar-submenu {
@@ -2100,18 +2437,57 @@ html:not(.lt-ie10) .not-animated {
 }
 
 .preloader {
+
 	position: fixed;
+
 	left: 0;
+
 	top: 0;
+
 	bottom: 0;
+
 	right: 0;
+
 	z-index: 9999999;
+
 	display: flex;
+
 	justify-content: center;
+
 	align-items: center;
+
 	padding: 20px;
+
 	background: #fff;
+
 	transition: .3s all ease;
+
+}
+
+
+
+.preloader.loaded {
+
+	opacity: 0;
+
+	visibility: hidden;
+
+}
+
+
+
+.preloader-body {
+
+	text-align: center;
+
+}
+
+.preloader-body p {
+
+	position: relative;
+
+	right: -8px;
+
 }
 
 .cssload-container {
